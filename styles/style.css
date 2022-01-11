@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.team-data {
+    display: flex;
+    flex-direction: row;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    float: left;
+}
