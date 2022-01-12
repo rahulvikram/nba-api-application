@@ -1,9 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+    background-color: rgb(4, 9, 17) !important;
+    color: white !important;
+}
+
+h2 {
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    margin-top: 10px !important;
+}
+
+#player-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    margin: auto;
+}
+
+.team {
     display: flex;
     flex-direction: row;
 }
@@ -11,8 +40,42 @@
 .information {
     display: flex;
     flex-direction: column;
+    float: right;
 }
 
-img {
+.team-img {
     float: left;
+    max-height: 74px;
+}
+
+#input-box {
+    background-color: rgb(9, 21, 39);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+#input-box::placeholder {
+    color: rgba(255,255,255,0.5)
+}
+#input-box:focus {
+    border: none;
+    outline-width: 0 !important;
+    outline: none !important;
+}
+#input-box:focus::placeholder {
+    color: transparent;
+    border: none;
+    outline-width: 0 !important;
+    outline: none !important;
+}
+
+#team-btn{
+    border-radius: 20px;
+}
+#team-btn:focus{
+    box-shadow: none;
 }

@@ -15,24 +15,29 @@ enterButton.addEventListener('click', (e) => {
     })
     .then(response => response.json())
     .then(response => {
-        console.log(response.api.teams[0].logo)
+        if(userInput.replace(/\s/g,'') == ''){
 
-        let output = `
-        <a href="${response.api.teams[0].logo}"><img src="${response.api.teams[0].logo}" height="72" width="72" ></a>
-        <div class="information">
-            <p><strong>Team: </strong>${response.api.teams[0].fullName}</p>
-            <p><strong>Team Code: </strong>${response.api.teams[0].shortName}</p>
-            <p><strong>Conference: </strong>${response.api.teams[0].leagues.standard.confName}</p>
-            <p><strong>Division: </strong>${response.api.teams[0].leagues.standard.divName}</p>
-        </div>
-        `
-        teamData.innerHTML = output
+        } else {
+            let output = `
+            <div class="team">
+                <div class="image">
+                    <a href="${response.api.teams[0].logo}" target="_blank"><img class="team-img" src="${response.api.teams[0].logo}"></a>
+                </div>
+                <div class="information">
+                    <p><strong>Team: </strong>${response.api.teams[0].fullName}</p>
+                    <p><strong>Team Code: </strong>${response.api.teams[0].shortName}</p>
+                    <p><strong>Conference: </strong>${response.api.teams[0].leagues.standard.confName}</p>
+                    <p><strong>Division: </strong>${response.api.teams[0].leagues.standard.divName}</p>
+                </div>
+            </div>
+            `
+            teamData.innerHTML += output
+        }
+
     })
     .catch(err => {
-        console.error(err);
+        console.log("Error: Invalid entry.")
     });
-
-
 
     // fetch("https://api-nba-v1.p.rapidapi.com/players/teamId/22", {
     // 	"method": "GET",
