@@ -15,6 +15,7 @@ h2 {
     font-size: 48px !important;
     font-weight: 800 !important;
     margin-top: 10px !important;
+    margin-bottom: 0px !important;
 }
 
 #player-search {
@@ -35,17 +36,31 @@ h2 {
 .team {
     display: flex;
     flex-direction: row;
+    background-color: rgb(9, 21, 39);
+    margin-top: 16px;
+    padding: 14px;
+    width: 600px;
+    border-radius: 16px;
 }
 
 .information {
     display: flex;
     flex-direction: column;
-    float: right;
+    gap: 0px;
+    background-color: rgb(7, 16, 31);
+    margin-left: 13px;
+    padding: 10px;
+    border-radius: 12px;
+    width: 460px;
 }
+
 
 .team-img {
     float: left;
-    max-height: 74px;
+    max-height: 103px;
+    background-color: rgb(7, 16, 31);
+    padding: 8px 20px 8px 20px;
+    border-radius: 12px;
 }
 
 #input-box {
@@ -75,7 +90,45 @@ h2 {
 
 #team-btn{
     border-radius: 20px;
+    margin-right: 0px;
 }
 #team-btn:focus{
     box-shadow: none;
+}
+
+#clear-btn{
+    border-radius: 20px;
+    margin-left: 1px;
+}
+#clear-btn:focus{
+    box-shadow: none;
+}
+
+p {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 14px;
+}
+
+.sublink{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white !important;
+}
+a::after{
+    display:block;
+    color: white;
+    content: '';
+    border-bottom: solid 1.5px #ffffff;
+    transform: scaleX(0);
+    transition: transform 125ms ease-in-out;
+}
+.sublink:hover::after{
+    transform: scaleX(1);
 }
