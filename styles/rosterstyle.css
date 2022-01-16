@@ -24,43 +24,24 @@ h2 {
     align-items: center;
 }
 
-.team-data {
-    display: flex;
-    flex-direction: column;
-}
-
-.inputs {
-    margin: auto;
-}
-
-.team {
-    display: flex;
-    flex-direction: row;
+.player-card {
+    margin: 12px;
+    line-height: 20px;
     background-color: rgb(9, 21, 39);
-    margin-top: 16px;
-    padding: 14px;
-    width: 600px;
-    border-radius: 16px;
+    width: 225px;
+    padding: 18px;
+    border-radius: 12px;
 }
 
-.information {
+#roster-data {
+    display: grid;
+    margin-top: 4px;
+    grid-template-columns: 33% 33% 34%;
+}
+
+.links {
     display: flex;
-    flex-direction: column;
-    gap: 0px;
-    background-color: rgb(7, 16, 31);
-    margin-left: 13px;
-    padding: 10px;
-    border-radius: 12px;
-    width: 460px;
-}
-
-
-.team-img {
-    float: left;
-    max-height: 103px;
-    background-color: rgb(7, 16, 31);
-    padding: 8px 20px 8px 20px;
-    border-radius: 12px;
+    gap: 24px;
 }
 
 #input-box {
@@ -110,11 +91,6 @@ p {
     font-size: 14px;
 }
 
-.links {
-    display: flex;
-    gap: 24px;
-}
-
 .sublink{
     margin-top: 0px;
     margin-bottom: 8px;
@@ -136,4 +112,17 @@ a::after{
 }
 .sublink:hover::after{
     transform: scaleX(1);
+}
+
+.sublink2{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    padding-bottom: 0px;
+    color: white;
+    text-decoration: none;
+}
+
+#player-name {
+    font-size: 20px;
 }
